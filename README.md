@@ -1,11 +1,11 @@
-About pytest-fail-slow
-======================
+About pytest-fail-slow-feedstock
+================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pytest-fail-slow-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/jwodder/pytest-fail-slow
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pytest-fail-slow-feedstock/blob/main/LICENSE.txt)
 
 Summary: Fail tests that take too long to run
 

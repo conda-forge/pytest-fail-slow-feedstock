@@ -1,5 +1,5 @@
 {% set name = "pytest-fail-slow" %}
-{% set version = "0.3.0" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: bc022f3f4f170b7e3e7d4dff45bd9e7855e4935ae396bb40b4521ce1ef8ea41c
+  sha256: 5cfe9fb63b1b55193277db3a0e7f9d01c25112932bb9063ec7035beed6533b56
 
 build:
   noarch: python
@@ -20,7 +20,7 @@ requirements:
     - pip
     - setuptools
   run:
-    - python >=3.6
+    - python >=3.7
     - pytest >=6.0
 
 test:
@@ -39,14 +39,10 @@ about:
   license_file: LICENSE
   summary: Fail tests that take too long to run
   description: |
-    `pytest-fail-slow` is a pytest plugin for making tests fail that take too
-    long to run.  It adds a `--fail-slow DURATION` command-line option to
-    pytest that causes any & all otherwise-passing tests that run for longer
-    than the given duration to be marked as failures, and it adds a
-    `@pytest.mark.fail_slow(DURATION)` marker for making an individual test
-    fail if it runs for longer than the given duration.  If `--fail-slow` is
-    given and a test has the `@fail_slow()` marker, the duration given by the
-    marker takes precedence for that test.
+    `pytest-fail-slow` is a pytest plugin for treating tests as failed if they
+    took too long to run.  It adds markers for failing tests if they or their
+    setup stages run for longer than a given duration, along with command-line
+    options for applying the same cutoff to all tests.
   dev_url: https://github.com/jwodder/pytest-fail-slow
 
 extra:

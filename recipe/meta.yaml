@@ -1,5 +1,5 @@
 {% set name = "pytest-fail-slow" %}
-{% set version = "0.3.0" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: bc022f3f4f170b7e3e7d4dff45bd9e7855e4935ae396bb40b4521ce1ef8ea41c
+  sha256: 5cfe9fb63b1b55193277db3a0e7f9d01c25112932bb9063ec7035beed6533b56
 
 build:
   noarch: python

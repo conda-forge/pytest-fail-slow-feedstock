@@ -11,14 +11,10 @@ Summary: Fail tests that take too long to run
 
 Development: https://github.com/jwodder/pytest-fail-slow
 
-`pytest-fail-slow` is a pytest plugin for making tests fail that take too
-long to run.  It adds a `--fail-slow DURATION` command-line option to
-pytest that causes any & all otherwise-passing tests that run for longer
-than the given duration to be marked as failures, and it adds a
-`@pytest.mark.fail_slow(DURATION)` marker for making an individual test
-fail if it runs for longer than the given duration.  If `--fail-slow` is
-given and a test has the `@fail_slow()` marker, the duration given by the
-marker takes precedence for that test.
+`pytest-fail-slow` is a pytest plugin for treating tests as failed if they
+took too long to run.  It adds markers for failing tests if they or their
+setup stages run for longer than a given duration, along with command-line
+options for applying the same cutoff to all tests.
 
 
 Current build status
@@ -107,7 +103,7 @@ available continuous integration services. Thanks to the awesome service provide
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
 [Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
 it is possible to build and upload installable packages to the
-[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
